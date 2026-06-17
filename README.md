@@ -1,7 +1,7 @@
-#Git Advanced Exercise Solutions
-#Part1
-#1: Missing File Fix
-   advanced-git on  main took 2s 
+# Git Advanced Exercise Solutions
+## Part1
+### 1: Missing File Fix
+```bash   advanced-git on  main took 2s 
 ❯ git clone https://github.com/ntwari-k-10/Gym-Git-Exercise-Solutions.git
 Cloning into 'Gym-Git-Exercise-Solutions'...
 remote: Enumerating objects: 3, done.
@@ -97,5 +97,5 @@ Gym-Git-Exercise-Solutions on  main [⇡]
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test2.md
 Successfully rebased and updated refs/heads/main.
-
+```
   
