@@ -125,5 +125,214 @@ Gym-Git-Exercise-Solutions on  HEAD (537626f)
 31c12bf chore: Create initial file
 20f97f0 (origin/main, origin/HEAD) Initial commit
 ```
+### 4: Splitting a Commit
+```bash
+Gym-Git-Exercise-Solutions on  HEAD (537626f) 
+❯ git status
+Not currently on any branch.
+nothing to commit, working tree clean
 
+Gym-Git-Exercise-Solutions on  HEAD (537626f) 
+❯ git reset HEAD~
+
+Gym-Git-Exercise-Solutions on  HEAD (61a1dbd) [?] 
+❯ git status
+Not currently on any branch.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	test4.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+Gym-Git-Exercise-Solutions on  HEAD (537626f) 
+❯ git reset HEAD~
+
+Gym-Git-Exercise-Solutions on  HEAD (61a1dbd) [?] 
+❯ git status
+Not currently on any branch.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	test4.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Gym-Git-Exercise-Solutions on  HEAD (61a1dbd) [?] 
+❯ git commit --amend --no-edit
+[detached HEAD 78e4da3] chore:Create third and fourth file
+ Date: Wed Jun 17 11:13:26 2026 +0200
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+
+Gym-Git-Exercise-Solutions on  HEAD (78e4da3) [?] 
+❯ git status
+Not currently on any branch.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	test4.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Gym-Git-Exercise-Solutions on  HEAD (78e4da3) [?] 
+❯ git reset HEAD~1 test4.md
+git commit --amend --no-edit
+[detached HEAD d31444a] chore:Create third and fourth file
+ Date: Wed Jun 17 11:13:26 2026 +0200
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+
+Gym-Git-Exercise-Solutions on  HEAD (d31444a) [?] 
+❯ git status
+Not currently on any branch.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	test4.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Gym-Git-Exercise-Solutions on  HEAD (d31444a) [?] 
+❯ git rm --cached test4.md
+fatal: pathspec 'test4.md' did not match any files
+
+Gym-Git-Exercise-Solutions on  HEAD (d31444a) [?] 
+❯ git status
+Not currently on any branch.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	test4.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Gym-Git-Exercise-Solutions on  HEAD (d31444a) [?] 
+❯ git rm --cached test4.md
+fatal: pathspec 'test4.md' did not match any files
+
+Gym-Git-Exercise-Solutions on  HEAD (d31444a) [?] 
+❯ echo "test4.md" >> .gitignore
+
+Gym-Git-Exercise-Solutions on  HEAD (d31444a) [?] 
+❯ git log --oneline
+d31444a (HEAD) chore:Create third and fourth file
+31c12bf chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  HEAD (d31444a) [?] 
+❯ git add --intent-to-add test4.md
+The following paths are ignored by one of your .gitignore files:
+test4.md
+hint: Use -f if you really want to add them.
+hint: Disable this message with "git config set advice.addIgnoredFile false"
+
+Gym-Git-Exercise-Solutions on  HEAD (d31444a) [?] 
+❯ git add .gitignore test4.md
+git commit -m "Remove test4.md from gitignore and start tracking it again"
+The following paths are ignored by one of your .gitignore files:
+test4.md
+hint: Use -f if you really want to add them.
+hint: Disable this message with "git config set advice.addIgnoredFile false"
+[detached HEAD 2d37f0c] Remove test4.md from gitignore and start tracking it again
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+
+Gym-Git-Exercise-Solutions on  HEAD (2d37f0c) 
+❯ git log --oneline
+2d37f0c (HEAD) Remove test4.md from gitignore and start tracking it again
+d31444a chore:Create third and fourth file
+31c12bf chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  HEAD (2d37f0c) 
+❯ git rebase -i HEAD~1
+Successfully rebased and updated detached HEAD.
+
+Gym-Git-Exercise-Solutions on  HEAD (2d37f0c) took 30s 
+❯ git rebase -i HEAD~1
+[detached HEAD 12e3b46] chore: Create last file
+ Date: Wed Jun 17 12:23:20 2026 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitignore
+Successfully rebased and updated detached HEAD.
+
+Gym-Git-Exercise-Solutions on  HEAD (12e3b46) took 1m32s 
+❯ git log --oneline
+12e3b46 (HEAD) chore: Create last file
+d31444a chore:Create third and fourth file
+31c12bf chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  HEAD (12e3b46) 
+❯ git status
+Not currently on any branch.
+nothing to commit, working tree clean
+
+Gym-Git-Exercise-Solutions on  HEAD (12e3b46) 
+❯ git reset HEAD~1
+
+Gym-Git-Exercise-Solutions on  HEAD (d31444a) [?] 
+❯ git status
+Not currently on any branch.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Gym-Git-Exercise-Solutions on  HEAD (d31444a) [?] 
+❯ git reset HEAD~1
+
+Gym-Git-Exercise-Solutions on  HEAD (31c12bf) [?] 
+❯ git status
+Not currently on any branch.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+	test3.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Gym-Git-Exercise-Solutions on  HEAD (31c12bf) [?] 
+❯ git add test3.md
+
+Gym-Git-Exercise-Solutions on  HEAD (31c12bf) [+?] 
+❯ git commit -m "chore:Create Third file"
+[detached HEAD 3fed9d0] chore:Create Third file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+
+Gym-Git-Exercise-Solutions on  HEAD (3fed9d0) [?] 
+❯ git add test4.md
+The following paths are ignored by one of your .gitignore files:
+test4.md
+hint: Use -f if you really want to add them.
+hint: Disable this message with "git config set advice.addIgnoredFile false"
+
+Gym-Git-Exercise-Solutions on  HEAD (3fed9d0) [?] 
+❯ git add -f test4.md
+
+Gym-Git-Exercise-Solutions on  HEAD (3fed9d0) [+?] 
+❯ git status
+Not currently on any branch.
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test4.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+
+Gym-Git-Exercise-Solutions on  HEAD (3fed9d0) [+?] 
+❯ git commit -m "chore: Created fourt file"
+[detached HEAD e954189] chore: Created fourt file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test4.md
+
+Gym-Git-Exercise-Solutions on  HEAD (e954189) [?] 
+❯ git log --oneline
+e954189 (HEAD) chore: Created fourt file
+3fed9d0 chore:Create Third file
+31c12bf chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  HEAD (e954189) [?] 
+❯ git log
+
+```
 
