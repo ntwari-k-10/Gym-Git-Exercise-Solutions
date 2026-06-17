@@ -102,5 +102,28 @@ Gym-Git-Exercise-Solutions on  HEAD (af0d90c) took 36s
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test2.md
 Successfully rebased and updated detached HEAD.
+```
+### 3: Keeping History Tidy - Squashing Commits
+```bash
+Gym-Git-Exercise-Solutions on  HEAD (e528caf) 
+❯ git rebase -i --root
+[detached HEAD 31c12bf] chore: Create initial file
+ Date: Wed Jun 17 09:11:50 2026 +0200
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test1.md
+ create mode 100644 test2.md
+Successfully rebased and updated detached HEAD.
+
+Gym-Git-Exercise-Solutions on  HEAD (537626f) took 3m3s 
+❯ git log --online
+fatal: unrecognized argument: --online
+
+Gym-Git-Exercise-Solutions on  HEAD (537626f) 
+❯ git log --oneline
+537626f (HEAD) chore: Create fourth file
+61a1dbd chore:Create third and fourth file
+31c12bf chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+```
 
 
