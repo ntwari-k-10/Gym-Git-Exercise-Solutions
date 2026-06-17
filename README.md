@@ -91,11 +91,5 @@ Gym-Git-Exercise-Solutions on  main [?⇡] took 13s
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test4.md
 Gym-Git-Exercise-Solutions on  main [⇡] 
-❯ git rebase -i HEAD~3
-[detached HEAD 018de26] chore: Create second file
- Date: Wed Jun 17 09:14:06 2026 +0200
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 test2.md
-Successfully rebased and updated refs/heads/main.
 ```
   
