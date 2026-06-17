@@ -1,7 +1,8 @@
 # Git Advanced Exercise Solutions
 ## Part1
 ### 1: Missing File Fix
-```bash   advanced-git on  main took 2s 
+```bash
+ advanced-git on  main took 2s 
 ❯ git clone https://github.com/ntwari-k-10/Gym-Git-Exercise-Solutions.git
 Cloning into 'Gym-Git-Exercise-Solutions'...
 remote: Enumerating objects: 3, done.
@@ -92,4 +93,14 @@ Gym-Git-Exercise-Solutions on  main [?⇡] took 13s
  create mode 100644 test4.md
 Gym-Git-Exercise-Solutions on  main [⇡] 
 ```
-  
+### 2: Editing Commit History
+```bash
+Gym-Git-Exercise-Solutions on  HEAD (af0d90c) took 36s 
+❯ git rebase -i HEAD~3
+[detached HEAD e79aebd] chore: Create second file
+ Date: Wed Jun 17 11:13:12 2026 +0200
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test2.md
+Successfully rebased and updated detached HEAD.
+
+
