@@ -335,4 +335,83 @@ Gym-Git-Exercise-Solutions on  HEAD (e954189) [?]
 ❯ git log
 
 ```
+### 5: Advanced Squashing
+```bash
+Gym-Git-Exercise-Solutions on  HEAD (e954189) [?] 
+❯ git log --oneline
+e954189 (HEAD) chore: Created fourt file
+3fed9d0 chore:Create Third file
+31c12bf chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
 
+Gym-Git-Exercise-Solutions on  HEAD (e954189) [?] 
+❯ git reset --soft HEAD~2
+
+Gym-Git-Exercise-Solutions on  HEAD (31c12bf) [+?] 
+❯ git status
+Not currently on any branch.
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test3.md
+	new file:   test4.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	.gitignore
+
+
+Gym-Git-Exercise-Solutions on  HEAD (31c12bf) [+?] 
+❯ git commit -m " chore:Create third and fourth file"
+[detached HEAD ec70a59]  chore:Create third and fourth file
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 test3.md
+ create mode 100644 test4.md
+
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?] 
+❯ git log --oneline
+ec70a59 (HEAD)  chore:Create third and fourth file
+31c12bf chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?] 
+❯ 
+```
+### 6: Dropping a Commit
+```bash
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?] 
+❯ touch unwanted.txt
+
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?] 
+❯ nano unwanted.txt
+
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?] 
+❯ git add unwanted.txt
+
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [+?] 
+❯ git commit -m "Unwanted commit"
+[detached HEAD 00284a1] Unwanted commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 unwanted.txt
+
+Gym-Git-Exercise-Solutions on  HEAD (00284a1) [?] 
+❯ git log --oneline
+00284a1 (HEAD) Unwanted commit
+ec70a59  chore:Create third and fourth file
+31c12bf chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  HEAD (00284a1) [?] 
+❯ git rebase -i HEAD~2
+Successfully rebased and updated detached HEAD.
+
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?] took 20s 
+❯ git log --oneline
+ec70a59 (HEAD)  chore:Create third and fourth file
+31c12bf chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?] 
+❯ 
+
+❯ 
+```
