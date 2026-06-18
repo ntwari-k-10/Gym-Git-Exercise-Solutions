@@ -515,3 +515,44 @@ f9705e3 chore:Create third and fourth file
 Gym-Git-Exercise-Solutions on  main [?⇡] 
 ❯ 
 ```
+### 9: Visualizing Commit History (Bonus)
+```bash
+Gym-Git-Exercise-Solutions on  main [?⇡] 
+❯ git log --graph
+* commit a7eb3ea8c5559697f437983a6392561f1965300e (HEAD -> main)
+| Author: Kevin NTWARI <ntwarik10@gmail.com>
+| Date:   Thu Jun 18 14:19:01 2026 +0200
+| 
+|     Implemented test 5
+| 
+* commit fcbe7709aeebb12d3812a0f663cbd75b2025e0ab
+| Author: Kevin NTWARI <ntwarik10@gmail.com>
+| Date:   Wed Jun 17 09:20:08 2026 +0200
+| 
+|     chore: Create fourth file
+| 
+* commit f9705e3583870b7fa89cb951bdd136d7cb09a83a
+| Author: Kevin NTWARI <ntwarik10@gmail.com>
+| Date:   Wed Jun 17 09:15:45 2026 +0200
+| 
+|     chore:Create third and fourth file
+| 
+* commit 018de2618129d0ac658eba6c0667fda841220244
+| Author: Kevin NTWARI <ntwarik10@gmail.com>
+| Date:   Wed Jun 17 09:14:06 2026 +0200
+| 
+|     chore: Create second file
+| 
+* commit 8296cc0a20f7899c9ab5a17f856611c38ea8a646
+| Author: Kevin NTWARI <ntwarik10@gmail.com>
+| Date:   Wed Jun 17 09:11:50 2026 +0200
+| 
+|     chore: Create initial file
+| 
+* commit 20f97f05ebdae15b56dc037a50b0abc77ebd2fb4 (origin/main, origin/HEAD)
+  Author: Ntwari kevin <ntwarik10@gmail.com>
+  Date:   Thu Apr 16 14:39:47 2026 +0200
+  
+      Initial commit
+
+```
