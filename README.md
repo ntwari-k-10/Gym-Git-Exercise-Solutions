@@ -556,3 +556,55 @@ Gym-Git-Exercise-Solutions on  main [?⇡]
       Initial commit
 
 ```
+### 10: Understanding Reflogs (Bonus)
+```bash
+Gym-Git-Exercise-Solutions on  main [?⇡] 
+❯ git reflog
+a7eb3ea (HEAD -> main) HEAD@{0}: cherry-pick: Implemented test 5
+fcbe770 HEAD@{1}: checkout: moving from ft/branch to main
+ad92934 (ft/branch) HEAD@{2}: checkout: moving from main to ft/branch
+fcbe770 HEAD@{3}: checkout: moving from ft/branch to main
+ad92934 (ft/branch) HEAD@{4}: commit: Implemented test 5
+5b8fa24 HEAD@{5}: checkout: moving from 5b8fa24b5853d357ba829be5de3c1713e76b5393 to ft/branch
+5b8fa24 HEAD@{6}: rebase (pick): chore:Create third and fourth file
+60d1e0c HEAD@{7}: rebase (pick): chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) HEAD@{8}: rebase (start): checkout HEAD~2
+8490b74 HEAD@{9}: rebase (pick): chore: Create initial file
+bd9502e HEAD@{10}: rebase (pick): chore:Create third and fourth file
+20f97f0 (origin/main, origin/HEAD) HEAD@{11}: rebase (start): checkout HEAD~2
+ec70a59 HEAD@{12}: rebase (start): checkout HEAD~2
+00284a1 HEAD@{13}: commit: Unwanted commit
+ec70a59 HEAD@{14}: reset: moving to HEAD~1
+b91ea3b HEAD@{15}: commit: Unwanted commit
+ec70a59 HEAD@{16}: commit: chore:Create third and fourth file
+31c12bf HEAD@{17}: reset: moving to HEAD~2
+e954189 HEAD@{18}: commit: chore: Created fourt file
+3fed9d0 HEAD@{19}: commit: chore:Create Third file
+31c12bf HEAD@{20}: reset: moving to HEAD~1
+d31444a HEAD@{21}: reset: moving to HEAD~1
+12e3b46 HEAD@{22}: rebase (reword): chore: Create last file
+2d37f0c HEAD@{23}: rebase: fast-forward
+d31444a HEAD@{24}: rebase (start): checkout HEAD~1
+2d37f0c HEAD@{25}: commit: Remove test4.md from gitignore and start tracking it again
+d31444a HEAD@{26}: commit (amend): chore:Create third and fourth file
+78e4da3 HEAD@{27}: commit (amend): chore:Create third and fourth file
+61a1dbd HEAD@{28}: reset: moving to HEAD~
+537626f HEAD@{29}: rebase (pick): chore: Create fourth file
+61a1dbd HEAD@{30}: rebase (pick): chore:Create third and fourth file
+31c12bf HEAD@{31}: rebase (squash): chore: Create initial file
+8296cc0 HEAD@{32}: rebase: fast-forward
+20f97f0 (origin/main, origin/HEAD) HEAD@{33}: rebase: fast-forward
+67d2f1e HEAD@{34}: rebase (start): checkout 67d2f1e40f745ac07f6f9c209ae6b3500f9d1c59
+e528caf HEAD@{35}: rebase (pick): chore: Create fourth file
+281a263 HEAD@{36}: rebase (pick): chore:Create third and fourth file
+e79aebd HEAD@{37}: rebase (reword): chore: Create second file
+8685acf HEAD@{38}: rebase: fast-forward
+8296cc0 HEAD@{39}: rebase (start): checkout HEAD~3
+af0d90c HEAD@{40}: commit (amend): chore: Create fourth file
+87ffa49 HEAD@{41}: commit: chore: Create fourth file
+c790fe3 HEAD@{42}: commit: chore:Create third and fourth file
+8685acf HEAD@{43}: commit: chore: Create another file
+8296cc0 HEAD@{44}: rebase (start): checkout HEAD~3
+fcbe770 HEAD@{45}: rebase (finish): returning to refs/heads/main
+:
+```
