@@ -448,3 +448,70 @@ Gym-Git-Exercise-Solutions on  HEAD (5b8fa24) [?] took 22s
 Gym-Git-Exercise-Solutions on  HEAD (5b8fa24) [?] 
 ❯ 
 ```
+### 8: Cherry-Picking Commits
+```bash
+Gym-Git-Exercise-Solutions on  HEAD (5b8fa24) [?] 
+❯ git checkout -b ft/branch
+Switched to a new branch 'ft/branch'
+
+Gym-Git-Exercise-Solutions on  ft/branch [?] 
+❯ touch test5.md
+
+Gym-Git-Exercise-Solutions on  ft/branch [?] 
+❯ nano test5.md
+
+Gym-Git-Exercise-Solutions on  ft/branch [?] took 31s 
+❯ git add test5.md
+
+Gym-Git-Exercise-Solutions on  ft/branch [+?] 
+❯ git commit -m "Implemented test 5"
+[ft/branch ad92934] Implemented test 5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+Gym-Git-Exercise-Solutions on  ft/branch [?] 
+❯ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Gym-Git-Exercise-Solutions on  main [?⇡] 
+❯ git checkout ft/branch
+Switched to branch 'ft/branch'
+
+Gym-Git-Exercise-Solutions on  ft/branch [?] 
+❯ git log --oneline
+ad92934 (HEAD -> ft/branch) Implemented test 5
+5b8fa24  chore:Create third and fourth file
+60d1e0c chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  ft/branch [?] 
+❯ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)
+
+Gym-Git-Exercise-Solutions on  main [?⇡] 
+❯ git cherry-pick ad92934
+[main a7eb3ea] Implemented test 5
+ Date: Thu Jun 18 14:19:01 2026 +0200
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.md
+
+Gym-Git-Exercise-Solutions on  main [?⇡] 
+❯ ls
+README.md  test1.md  test2.md  test3.md  test4.md  test5.md
+
+Gym-Git-Exercise-Solutions on  main [?⇡] 
+❯ git log --oneline
+a7eb3ea (HEAD -> main) Implemented test 5
+fcbe770 chore: Create fourth file
+f9705e3 chore:Create third and fourth file
+018de26 chore: Create second file
+8296cc0 chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  main [?⇡] 
+❯ 
+```
