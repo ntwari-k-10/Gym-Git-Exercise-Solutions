@@ -415,3 +415,36 @@ Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?]
 
 ❯ 
 ```
+### 7.Reordering Commits
+```bash
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?] 
+❯ git rebase -i HEAD~2
+Successfully rebased and updated detached HEAD.
+
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?] took 10s 
+❯ git rebase -i HEAD~3
+fatal: invalid upstream 'HEAD~3'
+
+Gym-Git-Exercise-Solutions on  HEAD (ec70a59) [?] 
+❯ git rebase -i HEAD~2
+Successfully rebased and updated detached HEAD.
+
+Gym-Git-Exercise-Solutions on  HEAD (8490b74) [?] took 34s 
+❯ git log --oneline
+8490b74 (HEAD) chore: Create initial file
+bd9502e  chore:Create third and fourth file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  HEAD (8490b74) [?] 
+❯ git rebase -i HEAD~2
+Successfully rebased and updated detached HEAD.
+
+Gym-Git-Exercise-Solutions on  HEAD (5b8fa24) [?] took 22s 
+❯ git log --oneline
+5b8fa24 (HEAD)  chore:Create third and fourth file
+60d1e0c chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) Initial commit
+
+Gym-Git-Exercise-Solutions on  HEAD (5b8fa24) [?] 
+❯ 
+```
