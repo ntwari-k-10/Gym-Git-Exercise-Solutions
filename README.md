@@ -606,5 +606,15 @@ c790fe3 HEAD@{42}: commit: chore:Create third and fourth file
 8685acf HEAD@{43}: commit: chore: Create another file
 8296cc0 HEAD@{44}: rebase (start): checkout HEAD~3
 fcbe770 HEAD@{45}: rebase (finish): returning to refs/heads/main
-:
+fcbe770 HEAD@{46}: rebase (pick): chore: Create fourth file
+f9705e3 HEAD@{47}: rebase (pick): chore:Create third and fourth file
+018de26 HEAD@{48}: rebase (reword): chore: Create second file
+3754d28 HEAD@{49}: rebase: fast-forward
+8296cc0 HEAD@{50}: rebase (start): checkout HEAD~3
+cf3454d HEAD@{51}: commit: chore: Create fourth file
+0a121b7 HEAD@{52}: commit: chore:Create third and fourth file
+3754d28 HEAD@{53}: commit: chore: Create another file
+8296cc0 HEAD@{54}: commit: chore: Create initial file
+20f97f0 (origin/main, origin/HEAD) HEAD@{55}: clone: from https://github.com/ntwari-k-10/Gym-Git-Exercise-Solutions.git
+(END)
 ```
