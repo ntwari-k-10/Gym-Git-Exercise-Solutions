@@ -644,3 +644,18 @@ advanced-git on  ft/new-feature [+?]
  1 file changed, 1 insertion(+)
  create mode 100644 feature.txt
 ```
+### 3:Switching Back and Making More Changes
+```bash
+advanced-git on  ft/new-feature [?] 
+❯ git checkout main
+Switched to branch 'main'
+
+advanced-git on  main [?] 
+❯ echo "Updated project readme">readme.text
+
+advanced-git on  main [?] 
+❯ ls
+Gym-Git-Exercise-Solutions  readme.text  test1.md  test2.md  test3.md  test4.md
+
+
+```
