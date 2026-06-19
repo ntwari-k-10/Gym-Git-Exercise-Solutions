@@ -799,3 +799,25 @@ advanced-git on  main [?]
 ❯ 
 
 ```
+### 8: Branch Rebasing
+```bash
+advanced-git on  main [?] 
+❯ git checkout ft/new-branch-from-commit
+Switched to branch 'ft/new-branch-from-commit'
+
+advanced-git on  ft/new-branch-from-commit [?] 
+❯ git rebase main
+Successfully rebased and updated refs/heads/ft/new-branch-from-commit.
+
+advanced-git on  ft/new-branch-from-commit [?] 
+❯ git log --oneline
+4209625 (HEAD -> ft/new-branch-from-commit, origin/ft/new-feature, main) Implemented core functionality for new feature
+b961bcd chore: Created the fourth file and staged it
+ca68ae1 chore: Create third and fourth files
+b56292d chore: Create second file
+4874f19 chore: Create initial file
+
+advanced-git on  ft/new-branch-from-commit [?] 
+❯ 
+
+```
