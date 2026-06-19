@@ -821,3 +821,49 @@ advanced-git on  ft/new-branch-from-commit [?]
 ❯ 
 
 ```
+### 9: Renaming Branches
+```bash
+advanced-git on  ft/new-branch-from-commit [?] 
+❯ git branch -m ft/new-branch-from-commit ft/improved-branch-name
+
+advanced-git on  ft/improved-branch-name [?] 
+❯ 
+```
+### 10: Checking Out Detached HEAD
+```bash
+advanced-git on  ft/improved-branch-name [?] 
+❯ git log --oneline
+4209625 (HEAD -> ft/improved-branch-name, origin/ft/new-feature, main) Implemented core functionality for new feature
+b961bcd chore: Created the fourth file and staged it
+ca68ae1 chore: Create third and fourth files
+b56292d chore: Create second file
+4874f19 chore: Create initial file
+
+advanced-git on  ft/improved-branch-name [?] 
+❯ git checkout ca68ae1
+Note: switching to 'ca68ae1'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at ca68ae1 chore: Create third and fourth files
+
+advanced-git on  HEAD (ca68ae1) [?] 
+❯ git log --oneline
+ca68ae1 (HEAD) chore: Create third and fourth files
+b56292d chore: Create second file
+4874f19 chore: Create initial file
+
+```
