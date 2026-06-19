@@ -659,3 +659,10 @@ Gym-Git-Exercise-Solutions  readme.text  test1.md  test2.md  test3.md  test4.md
 
 
 ```
+### 4: Local vs. Remote Branches
+```bash
+git push -u origin <branch-name>
+git pull branch-name
+git fetch --all
+```
+### 5: Branch Deletion
