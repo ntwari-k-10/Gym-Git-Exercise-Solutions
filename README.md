@@ -664,5 +664,101 @@ Gym-Git-Exercise-Solutions  readme.text  test1.md  test2.md  test3.md  test4.md
 git push -u origin <branch-name>
 git pull branch-name
 git fetch --all
+
+
+❯ git push -u origin ft/new-feature
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (15/15), 1.26 KiB | 184.00 KiB/s, done.
+Total 15 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), done.
+remote: 
+remote: Create a pull request for 'ft/new-feature' on GitHub by visiting:
+remote:      https://github.com/ntwari-k-10/Gym-Git-Exercise-Solutions/pull/new/ft/new-feature
+remote: 
+To github.com:ntwari-k-10/Gym-Git-Exercise-Solutions.git
+ * [new branch]      ft/new-feature -> ft/new-feature
+branch 'ft/new-feature' set up to track 'origin/ft/new-feature'.
+
+advanced-git on  main [?] took 5s 
+❯ git pull origin main
+remote: Enumerating objects: 51, done.
+remote: Counting objects: 100% (51/51), done.
+remote: Compressing objects: 100% (33/33), done.
+remote: Total 51 (delta 15), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (51/51), 18.93 KiB | 133.00 KiB/s, done.
+From github.com:ntwari-k-10/Gym-Git-Exercise-Solutions
+ * branch            main       -> FETCH_HEAD
+ * [new branch]      main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+
+
 ```
 ### 5: Branch Deletion
+```bash
+advanced-git on  main [?] 
+❯ git branch --merged
+* main
+
+advanced-git on  main [?] 
+❯ git merge ft/new-feature
+merge: ft/new-feature - not something we can merge
+
+advanced-git on  main [?] 
+❯ git checkout -b ft/new-feature origin/ft/new-feature
+branch 'ft/new-feature' set up to track 'origin/ft/new-feature'.
+Switched to a new branch 'ft/new-feature'
+
+advanced-git on  ft/new-feature [?] 
+❯ git checkout main
+git merge ft/new-feature
+Switched to branch 'main'
+Already up to date.
+
+advanced-git on  main [?] 
+❯ git branch --merged
+  ft/new-feature
+* main
+
+advanced-git on  main [?] 
+❯ git merge ft/new-feature
+Already up to date.
+
+advanced-git on  main [?] 
+❯ git branch -d ft/new-feature
+Deleted branch ft/new-feature (was 4209625).
+
+```
+
+### 6: Creating a Branch from a Commit
+```bash
+advanced-git on  main [?] 
+❯ git log --oneline
+4209625 (HEAD -> main, origin/ft/new-feature) Implemented core functionality for new feature
+b961bcd chore: Created the fourth file and staged it
+ca68ae1 chore: Create third and fourth files
+b56292d chore: Create second file
+4874f19 chore: Create initial file
+
+advanced-git on  main [?] 
+❯ git checkout -b ft/new-branch-from-commit b961bcd
+Switched to a new branch 'ft/new-branch-from-commit'
+
+advanced-git on  ft/new-branch-from-commit [?] 
+❯ 
+
+```
