@@ -627,3 +627,20 @@ advanced-git on  main [?]
 Switched to a new branch 'ft/new-feature'
 
 ```
+### 2: Working on the Feature Branch
+```bash
+advanced-git on  ft/new-feature [?] 
+❯ touch feature.txt
+
+advanced-git on  ft/new-feature [?] 
+❯ nano feature.txt
+
+advanced-git on  ft/new-feature [?] took 37s 
+❯ git add feature.txt
+
+advanced-git on  ft/new-feature [+?] 
+❯ git commit -m "Implemented core functionality for new feature"
+[ft/new-feature 4209625] Implemented core functionality for new feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 feature.txt
+```
