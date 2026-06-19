@@ -618,3 +618,12 @@ cf3454d HEAD@{51}: commit: chore: Create fourth file
 20f97f0 (origin/main, origin/HEAD) HEAD@{55}: clone: from https://github.com/ntwari-k-10/Gym-Git-Exercise-Solutions.git
 (END)
 ```
+
+## Part 2: Branching Basics (10 Challenges)
+### 1. Feature Branch Creation
+```bash
+advanced-git on  main [?] 
+❯ git checkout -b ft/new-feature
+Switched to a new branch 'ft/new-feature'
+
+```
