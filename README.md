@@ -759,6 +759,43 @@ advanced-git on  main [?]
 Switched to a new branch 'ft/new-branch-from-commit'
 
 advanced-git on  ft/new-branch-from-commit [?] 
+❯ git log --oneline
+b961bcd (HEAD -> ft/new-branch-from-commit) chore: Created the fourth file and staged it
+ca68ae1 chore: Create third and fourth files
+b56292d chore: Create second file
+4874f19 chore: Create initial file
+
+```
+### 7: Branch Merging
+```bash
+❯ git checkout main
+Switched to branch 'main'
+
+advanced-git on  main [?] 
+❯ git log --oneline
+4209625 (HEAD -> main, origin/ft/new-feature) Implemented core functionality for new feature
+b961bcd (ft/new-branch-from-commit) chore: Created the fourth file and staged it
+ca68ae1 chore: Create third and fourth files
+b56292d chore: Create second file
+4874f19 chore: Create initial file
+
+advanced-git on  main [?] 
+❯ git merge ft/new-branch-from-commit
+Already up to date.
+advanced-git on  main [?] 
+❯ git branch --merged
+  ft/new-branch-from-commit
+* main
+
+advanced-git on  main [?] 
+❯ git log --oneline
+4209625 (HEAD -> main, origin/ft/new-feature) Implemented core functionality for new feature
+b961bcd (ft/new-branch-from-commit) chore: Created the fourth file and staged it
+ca68ae1 chore: Create third and fourth files
+b56292d chore: Create second file
+4874f19 chore: Create initial file
+
+advanced-git on  main [?] 
 ❯ 
 
 ```
